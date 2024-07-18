@@ -6,7 +6,7 @@ def calculate_average(numbers):
 
 def find_max(numbers):
     if len(numbers) == 0:
-        return None  # Retorna "None" se a lista estiver vazia, já que não há máximo em uma lista vazia
+        return None  # Condicional acrescentada para lidar melhor com os casos em que a lista estiver vazia, retornando None, já que não há máximo em uma lista vazia
     max_number = numbers[0]
     for number in numbers:
         if number > max_number:
@@ -25,7 +25,7 @@ def get_numbers():
 def main():
     numbers = get_numbers()
     if len(numbers) == 0:
-        print("No numbers entered.")  # Mensagem que informa se nenhum número for inserido
+        print("No numbers entered.")  # Condicional e mensagem acrescentadas para informar se/quando nenhum número for inserido
     else:
         print("Average:", calculate_average(numbers))
         print("Maximum:", find_max(numbers))
