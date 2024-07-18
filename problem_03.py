@@ -12,7 +12,7 @@ def matrix_multiply(A, B):
 
     for i in range(rows_A):
         for j in range(cols_B):
-            for k in range(cols_A):  # Corrigido de cols_B para cols_A
+            for k in range(cols_A):  # Trecho alterado de cols_B para cols_A, para corrigir a lógica de multiplicação das matrizes
                 result[i][j] += A[i][k] * B[k][j]
 
     return result
