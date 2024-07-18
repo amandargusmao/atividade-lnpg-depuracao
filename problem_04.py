@@ -47,11 +47,11 @@ class Bank:
         return None
 
     def transfer(self, from_account, to_account, amount):
-        if from_account.get_balance() >= amount:  # Adicionado com o objetivo de verificar se há saldo suficiente na conta de origem
+        if from_account.get_balance() >= amount:  # Condicional adicionada com o objetivo de verificar se há saldo suficiente na conta de origem
             from_account.withdraw(amount)
             to_account.deposit(amount)
         else:
-            print("Insufficient funds for transfer")  # Adicionado para informar quando não houver saldo na conta
+            print("Insufficient funds for transfer")  # Trecho adicionado para informar quando não houver saldo na conta
 
 
 def main():
