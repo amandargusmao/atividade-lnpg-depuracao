@@ -1,10 +1,10 @@
 def max_subarray_sum(arr, k):
     n = len(arr)
     if n < k or k <= 0:
-        return None  # Faz a verificação de entrada inválida: o array deve ter pelo menos k elementos e k deve ser positivo
+        return None  # Condicional modificada para fazer a verificação de entrada inválida: o array deve ter pelo menos k elementos e k deve ser positivo
 
-    max_sum = sum(arr[:k])  # Inicializa a soma máxima com a soma dos primeiros k elementos
-    window_sum = max_sum  # Configura a soma da janela inicial
+    max_sum = sum(arr[:k])  # Trecho alterado para inicializar a soma máxima com a soma dos primeiros k elementos
+    window_sum = max_sum  # Trecho substituído para configurar a soma da janela inicial
 
     for i in range(n - k):
         window_sum = window_sum - arr[i] + arr[i + k]  
@@ -23,7 +23,7 @@ def read_input():
 
 def main():
     arr, k = read_input()
-    if not arr or k <= 0 or len(arr) < k:  # Faz uma verificação adicional para garantir que a entrada válida
+    if not arr or k <= 0 or len(arr) < k:  # Condicional acrescentada para fazer uma verificação adicional que confere se a entrada é válida
         print("Invalid input.")  # Exibe uma mensagem de erro se a entrada for inválida
     else:
         result = max_subarray_sum(arr, k)
